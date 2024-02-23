@@ -19,6 +19,8 @@ const Calculator: React.FC = () => {
 	const [number1, setNumber1] = useState<number>(0);
 	const [number2, setNumber2] = useState<number>(0);
 
+	console.log(ResultCalculator);
+
 	const plusNumber = () => {
 		if (isNaN(number1) || isNaN(number2)) {
 			alert("Заполните поля числами");
@@ -63,7 +65,7 @@ const Calculator: React.FC = () => {
 	};
 
 	const clearAll = () => {
-		dispatch(Clear([]));
+		dispatch(Clear());
 		setNumber1(0);
 		setNumber2(0);
 	};

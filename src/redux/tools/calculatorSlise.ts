@@ -1,16 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface CalculatorType {
-	number1: number;
-	number2: number;
-}
-
 interface CalculatorState {
-	calculator: CalculatorType[];
+	calculator: number;
 }
 
 const initialState: CalculatorState = {
-	calculator: [],
+	calculator: 0,
 };
 
 const CalculatorSlice = createSlice({
@@ -33,7 +28,7 @@ const CalculatorSlice = createSlice({
 			state.calculator = action.payload.values;
 		},
 		Clear: (state) => {
-			state.calculator = [];
+			state.calculator = 0;
 		},
 	},
 });
